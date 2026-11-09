@@ -947,7 +947,7 @@ body.light-mode footer {
         gap: 30px;
     }
 
-    /* PHOTO AU-DESSUS DU TEXTE SUR MOBILE */
+    /* PHOTO HOME AVANT LE TEXTE */
 
     #Home .photo {
         order: -1;
@@ -960,11 +960,21 @@ body.light-mode footer {
         gap: 30px;
     }
 
+    /* PHOTO ABOUT ME AVANT LE TEXTE */
+
+    #About .about-image {
+        order: -1;
+    }
+
+    /* CONTENUS */
+
     .content,
     .about-content {
         margin: 0;
         padding: 0;
     }
+
+    /* TAILLE DES PHOTOS */
 
     .photo img,
     .about-image img {
@@ -1013,20 +1023,28 @@ body.light-mode footer {
         font-size: 12px;
     }
 
+    /* PHOTOS */
+
     .photo img,
     .about-image img {
         width: 230px;
         height: 230px;
     }
 
+    /* BOUTONS */
+
     .b,
     .b1 {
         padding: 15px 25px;
     }
 
+    /* CURSUS */
+
     .contenair .card {
         flex: 1 1 100%;
     }
+
+    /* CONTACT */
 
     .contact-form,
     .contact-info {
