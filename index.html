@@ -1,421 +1,410 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Mel Yohan, étudiant en Licence 3 MIAGE à l'Institut Universitaire d'Abidjan : développement web, mobile et data.">
     <title>Portfolio - Mel Yohan</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+
+    <!-- Ajoute la classe "js" tout de suite : les animations d'apparition
+         ne cachent rien si le JavaScript est désactivé -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Polices : Playfair Display (titres) + Inter (texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Untitled-1.css">
+    <script src="Untitled-1.js" defer></script>
 </head>
 
 <body>
 
+    <div class="progress" id="progress"></div>
+
     <!-- HEADER : En-tête du site -->
-    <header>
+    <header class="site-header" id="header">
         <nav>
-            <h1 style="color: yellow;">MY PORTFOLIO</h1>
-            <a href="#Home">HOME</a>
-            <a href="#About">ABOUT ME</a>
-            <a href="#Projects">PROJECTS</a>
-            <a href="#Skills">SKILLS</a>
-            <a href="#Contact">CONTACT ME</a>
-            <button id="theme-toggle">🌙</button>
+            <a href="#Home" class="logo">MYCM<span>.</span>Portfolio</a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#Home">Acceuil</a>
+                <a href="#About">A propos de moi</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Skills">Compétences</a>
+                <a href="#Contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Changer de thème">🌙</button>
+                <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Ouvrir le menu"
+                    aria-expanded="false" aria-controls="nav-links">☰</button>
+            </div>
         </nav>
     </header>
 
     <!-- MAIN : Contenu principal -->
     <main>
 
-        <!-- SECTION HOME -->
+        <!-- ================= SECTION HOME ================= -->
         <section id="Home">
 
-            <div class="hero">
+            <div class="wrap hero-grid">
 
-                <div class="content">
+                <div class="hero-text">
 
-                    <h1 id="titre-home">
-                        Je suis
-                        <span>MEL YOHAN CLOVIS MAXIMILIEN</span>,
-                    </h1>
+                    <p class="kicker"><span class="rule"></span> Portfolio — 2026</p>
 
-                    <p class="description" id="description-home"
-                        style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                       Étudiant en L3 de MIAGE à l’Institut Universitaire d’Abidjan, passionné par l’informatique et les nouvelles technologies. Je m'intéresse particulièrement au développement et à la data, avec l'envie de concevoir des solutions innovantes et utiles. Ambitieux, curieux et déterminé, je développe continuellement mes compétences pour transformer mes idées en réalisations concrètes. Bienvenue dans mon univers !
-                    </p>
+                    <!-- Le seul h1 de la page : c'est le titre principal -->
+                    <h1 id="titre-home"><span id="debut-titre">Je suis </span><span id="nom-home">Mel Yohan Clovis Maximilien</span></h1>
 
-                    <div class="btn" id="boutons-home">
-                        <button class="b1" onclick="location.href='#Contact'">HIRE ME</button>
-                        <button class="b" onclick="location.href='#About'">ABOUT ME</button>
+                    <p class="description" id="description-home">Étudiant en L3 de MIAGE à l’Institut Universitaire d’Abidjan, passionné par l’informatique et les nouvelles technologies. Je m'intéresse particulièrement au développement et à la data, avec l'envie de concevoir des solutions innovantes et utiles. Ambitieux, curieux et déterminé, je développe continuellement mes compétences pour transformer mes idées en réalisations concrètes. Bienvenue dans mon univers !</p>
+
+                    <div class="hero-actions" id="boutons-home">
+                        <a href="#Contact" class="btn btn-gold">Contact</a>
+                        <a href="#About" class="btn btn-line">A propos de moi</a>
                     </div>
 
+                    <dl class="hero-meta">
+                        <div>
+                            <dt>Formation</dt>
+                            <dd>Licence 3 MIAGE</dd>
+                        </div>
+                        <div>
+                            <dt>Établissement</dt>
+                            <dd>IUA · Abidjan</dd>
+                        </div>
+                        <div>
+                            <dt>Disponibilité</dt>
+                            <dd>Ouvert aux stages</dd>
+                        </div>
+                    </dl>
+
                 </div>
 
-                <div class="photo">
-                    <img src="photo1.jpeg" alt="Photo de Mel Yohan">
-                </div>
+                <figure class="hero-photo">
+                    <div class="frame">
+                        <img src="photo1.jpeg" alt="Photo de Mel Yohan">
+                    </div>
+                    <figcaption>Mel Yohan · Abidjan, Côte d'Ivoire</figcaption>
+                </figure>
 
             </div>
 
         </section>
 
+        <!-- Bandeau de texte qui défile (décoratif) -->
+        <div class="ticker marquee" aria-hidden="true">
+            <div class="track">
+                <span>Développement web</span>
+                <span>Mobile</span>
+                <span>Data Science</span>
+                <span>Python</span>
+                <span>Laravel</span>
+            </div>
+        </div>
 
-        <!-- SECTION ABOUT ME -->
+
+        <!-- ================= SECTION ABOUT ME ================= -->
         <section id="About">
+            <div class="wrap">
 
-            <h1 style="text-align: center;">QUI SUIS-JE?</h1>
-
-            <div class="hero">
-
-                <div class="about-content">
-                    <p style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-                        Je suis Mel Yohan Clovis Maximilien, étudiant en troisième année de Licence MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l’Institut Universitaire d’Abidjan.
-                        Passionné par l’informatique, les nouvelles technologies et l’innovation, je m’intéresse particulièrement au développement web et mobile, à la Data Science ainsi qu’à l’analyse et à l’exploitation des données. J’aime comprendre les problématiques, explorer de nouvelles idées et rechercher des solutions adaptées aux besoins réels.
-                        Curieux, dynamique et déterminé, je suis toujours prêt à apprendre, à relever de nouveaux défis et à enrichir mes connaissances. Je porte un intérêt particulier aux projets qui me permettent de mettre en pratique mes compétences, de développer mon esprit d’analyse et de repousser mes limites.
-                        Mon ambition est de construire une carrière solide dans le domaine du numérique, de contribuer à des projets innovants et d'apporter une réelle valeur ajoutée aux équipes avec lesquelles je travaillerai.
-                        Je suis ouvert aux opportunités de stage, de collaboration et aux projets professionnels qui me permettront de mettre mon potentiel à contribution, d'apprendre auprès de professionnels expérimentés et de continuer à évoluer.
-                    </p>
+                <div class="section-head reveal">
+                    <span class="num">01</span>
+                    <h2>Qui suis-je&nbsp;?</h2>
                 </div>
 
-                <div class="about-image">
-                    <img src="photo2.jpeg" alt="Moi">
+                <div class="about-grid">
+
+                    <figure class="about-photo reveal">
+                        <div class="frame">
+                            <img src="photo2.jpeg" alt="Mel Yohan" loading="lazy">
+                        </div>
+                    </figure>
+
+                    <div class="about-text reveal" style="--d: .12s">
+                        <p class="about-lead">Je suis Mel Yohan Clovis Maximilien, étudiant en troisième année de Licence MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l’Institut Universitaire d’Abidjan.</p>
+
+                        <div class="about-cols">
+                            <p>Passionné par l’informatique, les nouvelles technologies et l’innovation, je m’intéresse particulièrement au développement web et mobile, à la Data Science ainsi qu’à l’analyse et à l’exploitation des données. J’aime comprendre les problématiques, explorer de nouvelles idées et rechercher des solutions adaptées aux besoins réels.</p>
+                            <p>Curieux, dynamique et déterminé, je suis toujours prêt à apprendre, à relever de nouveaux défis et à enrichir mes connaissances. Je porte un intérêt particulier aux projets qui me permettent de mettre en pratique mes compétences, de développer mon esprit d’analyse et de repousser mes limites.</p>
+                            <p>Mon ambition est de construire une carrière solide dans le domaine du numérique, de contribuer à des projets innovants et d'apporter une réelle valeur ajoutée aux équipes avec lesquelles je travaillerai.</p>
+                            <p>Je suis ouvert aux opportunités de stage, de collaboration et aux projets professionnels qui me permettront de mettre mon potentiel à contribution, d'apprendre auprès de professionnels expérimentés et de continuer à évoluer.</p>
+                        </div>
+                    </div>
+
                 </div>
+
+                <h3 class="subhead reveal">Mon cursus</h3>
+
+                <ol class="cursus reveal">
+
+                    <li>
+                        <span class="year">2026–2027</span>
+                        <div class="cursus-info">
+                            <h4>Licence 3 MIAGE</h4>
+                            <p>Institut Universitaire d'Abidjan</p>
+                        </div>
+                        <img src="iua.jpg" alt="Institut Universitaire d'Abidjan" loading="lazy">
+                    </li>
+
+                    <li>
+                        <span class="year">2025–2026</span>
+                        <div class="cursus-info">
+                            <h4>Licence 2 MIAGE</h4>
+                            <p>Institut Universitaire d'Abidjan</p>
+                        </div>
+                        <img src="iua.jpg" alt="Institut Universitaire d'Abidjan" loading="lazy">
+                    </li>
+
+                    <li>
+                        <span class="year">2024–2025</span>
+                        <div class="cursus-info">
+                            <h4>Licence 1 MIAGE</h4>
+                            <p>Institut Universitaire d'Abidjan</p>
+                        </div>
+                        <img src="iua.jpg" alt="Institut Universitaire d'Abidjan" loading="lazy">
+                    </li>
+
+                    <li>
+                        <span class="year">2023–2024</span>
+                        <div class="cursus-info">
+                            <h4>Baccalauréat D</h4>
+                            <p>Lycée Djedji Amondji Pierre</p>
+                        </div>
+                        <img src="lmdap.jpeg" alt="Lycée Djedji Amondji Pierre" loading="lazy">
+                    </li>
+
+                </ol>
 
             </div>
-
-            <br><br>
-
-            <h1 style="text-align: center;">MON CURSUS</h1>
-
-            <div class="contenair">
-
-                <div class="card">
-                    <img src="iua.jpg" alt="IUA">
-                    <h2>2026-2027</h2>
-                    <p>Licence 3 MIAGE – Institut Universitaire d'Abidjan.</p>
-                </div>
-
-                <div class="card">
-                    <img src="iua.jpg" alt="IUA">
-                    <h2>2025-2026</h2>
-                    <p>Licence 2 MIAGE – Institut Universitaire d'Abidjan.</p>
-                </div>
-
-                <div class="card">
-                    <img src="iua.jpg" alt="IUA">
-                    <h2>2024-2025</h2>
-                    <p>Licence 1 MIAGE – Institut Universitaire d'Abidjan.</p>
-                </div>
-
-                <div class="card">
-                    <img src="lmdap.jpeg" alt="LMDAP">
-                    <h2>2023-2024</h2>
-                    <p>Baccalauréat D – Lycée Djedji Amondji Pierre.</p>
-                </div>
-
-            </div>
-
         </section>
 
 
-        <!-- SECTION PROJECTS -->
-        <section id="Projects">
+        <!-- ================= SECTION PROJECTS ================= -->
+        <section id="Projects" class="band">
+            <div class="wrap">
 
-            <h1 style="text-align: center;">MES PROJETS</h1>
-
-            <p class="projects-intro" style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">
-                Découvrez quelques projets que j'ai réalisés ou sur lesquels je travaille.
-            </p>
-
-            <div class="projects-container">
-
-                <!-- Projet 1 -->
-                <div class="project-card">
-
-                    <div class="project-image">
-                        <img src="images/projet1.jpg" alt="Projet de gestion scolaire">
-                    </div>
-
-                    <div class="project-content">
-                        <h2>Site de gestion touristique</h2>
-
-                        <p>
-                            Une application permettant de gérer le sejour des touristes en leur montrant les différents sites touristes que le Cote d'Ivoire et les hebergements a proximités ou autre
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>PHP</span>
-                        </div>
-
-                        <a href="#" class="project-btn">Voir le projet</a>
-                    </div>
-
+                <div class="section-head reveal">
+                    <span class="num">02</span>
+                    <h2>Mes projets</h2>
                 </div>
 
+                <p class="section-intro reveal">Découvrez quelques projets que j'ai réalisés ou sur lesquels je travaille.</p>
 
-                <!-- Projet 2 -->
-                <div class="project-card">
+                <div class="projects-container">
 
-                    <div class="project-image">
-                        <img src="capture.jpeg" alt="Projet de portfolio">
-                    </div>
-
-                    <div class="project-content">
-                        <h2>Portfolio personnel</h2>
-
-                        <p>
-                            Un site web personnel présentant ma personnalité, mon parcours,
-                            mes compétences et mes réalisations.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
+                    <!-- Projet 1 -->
+                    <article class="project reveal">
+                        <div class="project-image">
+                            <img src="images/projet1.jpg" alt="Capture du site de gestion touristique" loading="lazy">
                         </div>
-
-                        <a href="#" class="project-btn">Voir le projet</a>
-                    </div>
-
-                </div>
-
-
-                <!-- Projet 3 -->
-                <div class="project-card">
-
-                    <div class="project-image">
-                        <img src="images/projet3.jpg" alt="Projet de gestion">
-                    </div>
-
-                    <div class="project-content">
-                        <h2>Application de gestion d'une paroisse</h2>
-
-                        <p>
-                            Une application destinée à faciliter
-                            l'organisation et la gestion des données.
-                        </p>
-
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>SQL</span>
+                        <div class="project-body">
+                            <span class="project-num">01</span>
+                            <h3>Site de gestion touristique</h3>
+                            <p>Une application web qui aide les touristes à organiser leur séjour : elle présente les sites touristiques de la Côte d'Ivoire et les hébergements à proximité.</p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>PHP</li>
+                            </ul>
+                            <!-- Remplace "#" par le lien de ton projet -->
+                            <a href="#" class="link-arrow">Voir le projet <span>→</span></a>
                         </div>
+                    </article>
 
-                        <a href="#" class="project-btn">Voir le projet</a>
-                    </div>
+                    <!-- Projet 2 -->
+                    <article class="project reveal" style="--d: .12s">
+                        <div class="project-image">
+                            <img src="capture.jpeg" alt="Capture du portfolio personnel" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-num">02</span>
+                            <h3>Portfolio personnel</h3>
+                            <p>Un site web personnel présentant ma personnalité, mon parcours, mes compétences et mes réalisations.</p>
+                            <ul class="project-tech">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="#" class="link-arrow">Voir le projet <span>→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 -->
+                    <article class="project reveal" style="--d: .24s">
+                        <div class="project-image">
+                            <img src="images/projet3.jpg" alt="Capture de l'application de gestion de paroisse" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <span class="project-num">03</span>
+                            <h3>Application de gestion d'une paroisse</h3>
+                            <p>Une application destinée à faciliter l'organisation et la gestion des données de la paroisse.</p>
+                            <ul class="project-tech">
+                                <li>Python</li>
+                                <li>SQL</li>
+                            </ul>
+                            <a href="#" class="link-arrow">Voir le projet <span>→</span></a>
+                        </div>
+                    </article>
 
                 </div>
 
             </div>
-
         </section>
 
-        <br><br>
 
-
-        <!-- SECTION SKILLS -->
+        <!-- ================= SECTION SKILLS ================= -->
         <section id="Skills">
+            <div class="wrap">
 
-            <h1 style="text-align: center;">SKILLS</h1>
-            <br><br><br><br>
+                <div class="section-head reveal">
+                    <span class="num">03</span>
+                    <h2>Skills</h2>
+                </div>
 
-            <div class="slider" style="--width: 200px; --height: 200px; --quantity: 6;">
+                <p class="section-intro reveal">Les technologies que j'utilise pour donner vie à mes idées.</p>
 
-                <div class="list">
+            </div>
 
-                    <div class="item" style="--position: 1">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
-                        </div>
+            <!-- Défilement des logos (le JS duplique les logos pour une boucle sans coupure) -->
+            <div class="logos marquee reveal">
+                <div class="track">
+
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"></div>
+
+                </div>
+            </div>
+
+            <div class="wrap">
+
+                <!-- Niveaux : data-level contient le pourcentage, le JS anime la barre et le chiffre -->
+                <div class="skills-list">
+
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">HTML</span><span class="pct">80%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="80"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 2">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">CSS</span><span class="pct">40%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="40"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 3">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">PHP</span><span class="pct">60%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="60"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 4">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">Python</span><span class="pct">60%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="60"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 5">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">Laravel</span><span class="pct">40%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="40"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 6">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">SQL</span><span class="pct">60%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="60"></span></div>
                     </div>
 
-                    <div class="item" style="--position: 7">
-                        <div class="card1">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-                        </div>
+                    <div class="skill-box">
+                        <div class="skill-row"><span class="title">JavaScript</span><span class="pct">40%</span></div>
+                        <div class="skill-bar"><span class="skill-per" data-level="40"></span></div>
                     </div>
 
                 </div>
 
             </div>
-
-            <br><br><br><br>
-
-            <div class="containers">
-
-                <div class="skill-box">
-                    <span class="title">HTML</span>
-                    <div class="skill-bar">
-                        <span class="skill-per html">
-                            <span class="tooltip">80%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">CSS</span>
-                    <div class="skill-bar">
-                        <span class="skill-per css">
-                            <span class="tooltip">40%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">PHP</span>
-                    <div class="skill-bar">
-                        <span class="skill-per php">
-                            <span class="tooltip">60%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">Python</span>
-                    <div class="skill-bar">
-                        <span class="skill-per python">
-                            <span class="tooltip">60%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">Laravel</span>
-                    <div class="skill-bar">
-                        <span class="skill-per laravel">
-                            <span class="tooltip">40%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">SQL</span>
-                    <div class="skill-bar">
-                        <span class="skill-per sql">
-                            <span class="tooltip">60%</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <span class="title">JavaScript</span>
-                    <div class="skill-bar">
-                        <span class="skill-per javascript">
-                            <span class="tooltip">40%</span>
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-
         </section>
 
 
-        <!-- SECTION CONTACT -->
-        <section id="Contact">
+        <!-- ================= SECTION CONTACT ================= -->
+        <section id="Contact" class="band">
+            <div class="wrap">
 
-            <h1>CONTACTEZ-MOI</h1>
-
-            <p class="contact-intro" style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">
-                Vous avez un projet ou une opportunité à me proposer ?
-                N'hésitez pas à me contacter !
-            </p>
-
-            <div class="contact-container">
-
-                <!-- Formulaire -->
-                <div class="contact-form">
-
-                    <h2>Envoyez-moi un message</h2>
-
-                    <form>
-                        <input type="text" placeholder="Votre nom" required>
-
-                        <input type="email" placeholder="Votre adresse email" required>
-
-                        <input type="text" placeholder="Sujet du message" required>
-
-                        <textarea placeholder="Votre message..." rows="6" required></textarea>
-
-                        <button type="submit">Envoyer le message</button>
-                    </form>
-
+                <div class="section-head reveal">
+                    <span class="num">04</span>
+                    <h2>Contactez-moi</h2>
                 </div>
 
+                <div class="contact-grid">
 
-                <!-- Informations de contact -->
-                <div class="contact-info">
+                    <!-- Coordonnées -->
+                    <div class="contact-info reveal">
 
-                    <h2>Mes coordonnées</h2>
+                        <p class="contact-lead">Vous avez un projet ou une opportunité à me proposer ? N'hésitez pas à me contacter !</p>
 
-                    <div class="info-box">
-                        <span>📧</span>
-                        <div>
-                            <h3>Email</h3>
-                            <p>melyohan225@gmail.com</p>
-                        </div>
+                        <dl class="contact-list">
+                            <div>
+                                <dt>Email</dt>
+                                <dd><a href="mailto:melyohan225@gmail.com">melyohan225@gmail.com</a></dd>
+                            </div>
+                            <div>
+                                <dt>Téléphone</dt>
+                                <dd><a href="tel:+2250749738144">+225 07 49 73 81 44</a></dd>
+                            </div>
+                            <div>
+                                <dt>Localisation</dt>
+                                <dd>Abidjan, Côte d'Ivoire</dd>
+                            </div>
+                            <div>
+                                <dt>Réseaux sociaux</dt>
+                                <dd>
+                                    <a href="https://www.linkedin.com/in/yohan-mel-597221324" target="_blank" rel="noopener">LinkedIn</a>
+                                    ·
+                                    <!-- Remplace "#" par le lien de ton profil GitHub -->
+                                    <a href="#" target="_blank" rel="noopener">GitHub</a>
+                                </dd>
+                            </div>
+                        </dl>
+
                     </div>
 
-                    <div class="info-box">
-                        <span>📱</span>
-                        <div>
-                            <h3>Téléphone</h3>
-                            <p>+225 0749738144</p>
-                        </div>
-                    </div>
+                    <!-- Formulaire -->
+                    <div class="contact-form reveal" style="--d: .12s">
 
-                    <div class="info-box">
-                        <span>📍</span>
-                        <div>
-                            <h3>Localisation</h3>
-                            <p>Abidjan, Côte d'Ivoire</p>
-                        </div>
-                    </div>
+                        <form id="contact-form">
+                            <div class="field">
+                                <label for="nom">Votre nom</label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
 
-                    <div class="info-box">
-                        <span>💻</span>
-                        <div>
-                            <h3>Réseaux sociaux</h3>
-                            <p>LinkedIn | GitHub</p>
-                        </div>
+                            <div class="field">
+                                <label for="email">Votre adresse email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="sujet">Sujet du message</label>
+                                <input type="text" id="sujet" name="sujet" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="message">Votre message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold">Envoyer le message</button>
+                            <p class="form-message" id="form-message" role="status"></p>
+                        </form>
+
                     </div>
 
                 </div>
 
             </div>
-
         </section>
 
     </main>
@@ -423,11 +412,13 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>
-            &copy; 2026 Mon portfolio.
-            Tous droits réservés à Autorité MEL YOHAN.
-        </p>
+        <div class="wrap footer-inner">
+            <p>&copy; <span id="annee">2026</span> Mel Yohan. Tous droits réservés.</p>
+            <a href="#Home">Retour en haut ↑</a>
+        </div>
     </footer>
+
+    <button id="to-top" class="to-top" aria-label="Retour en haut">↑</button>
 
 </body>
 
