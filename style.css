@@ -614,6 +614,8 @@ section {
     margin-bottom: 50px;
 }
 
+/* Conteneur contact */
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -926,7 +928,7 @@ body.light-mode footer {
 
 @media (max-width: 768px) {
 
-    /* Navigation */
+    /* NAVIGATION */
 
     nav {
         flex-wrap: wrap;
@@ -938,9 +940,22 @@ body.light-mode footer {
         width: 100%;
     }
 
-    /* HOME et ABOUT */
+    /* HOME */
 
-    .hero {
+    #Home .hero {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* PHOTO AU-DESSUS DU TEXTE SUR MOBILE */
+
+    #Home .photo {
+        order: -1;
+    }
+
+    /* ABOUT ME */
+
+    #About .hero {
         flex-direction: column;
         gap: 30px;
     }
@@ -987,8 +1002,10 @@ body.light-mode footer {
     .contact-container {
         flex-direction: column;
     }
-
 }
+
+
+/* ================= PETITS TELEPHONES ================= */
 
 @media (max-width: 480px) {
 
@@ -1015,17 +1032,4 @@ body.light-mode footer {
     .contact-info {
         padding: 20px;
     }
-
-@media screen and (max-width: 768px) {
-
-    .home-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home-container img {
-        order: -1;
-    }
-
 }
