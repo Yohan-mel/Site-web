@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mel Yohan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER : En-tête du site -->
+    <header>
+        <nav>
+            <h1 style="color: yellow;">MY PORTFOLIO</h1>
+            <a href="#Home">HOME</a>
+            <a href="#About">ABOUT ME</a>
+            <a href="#Projects">PROJECTS</a>
+            <a href="#Skills">SKILLS</a>
+            <a href="#Contact">CONTACT ME</a>
+            <button id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <!-- MAIN : Contenu principal -->
+    <main>
+
+        <!-- SECTION HOME -->
+        <section id="Home">
+
+            <div class="hero">
+
+                <div class="content">
+
+                    <h1 id="titre-home">
+                        Je suis
+                        <span>MEL YOHAN CLOVIS MAXIMILIEN</span>,
+                    </h1>
+
+                    <p class="description" id="description-home"
+                        style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                       Étudiant en L3 de MIAGE à l’Institut Universitaire d’Abidjan, passionné par l’informatique et les nouvelles technologies. Je m'intéresse particulièrement au développement et à la data, avec l'envie de concevoir des solutions innovantes et utiles. Ambitieux, curieux et déterminé, je développe continuellement mes compétences pour transformer mes idées en réalisations concrètes. Bienvenue dans mon univers !
+                    </p>
+
+                    <div class="btn" id="boutons-home">
+                        <button class="b1" onclick="location.href='#Contact'">HIRE ME</button>
+                        <button class="b" onclick="location.href='#About'">ABOUT ME</button>
+                    </div>
+
+                </div>
+
+                <div class="photo">
+                    <img src="photo1.jpeg" alt="Photo de Mel Yohan">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION ABOUT ME -->
+        <section id="About">
+
+            <h1 style="text-align: center;">QUI SUIS-JE?</h1>
+
+            <div class="hero">
+
+                <div class="about-content">
+                    <p style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                        Je suis Mel Yohan Clovis Maximilien, étudiant en troisième année de Licence MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises) à l’Institut Universitaire d’Abidjan.
+                        Passionné par l’informatique, les nouvelles technologies et l’innovation, je m’intéresse particulièrement au développement web et mobile, à la Data Science ainsi qu’à l’analyse et à l’exploitation des données. J’aime comprendre les problématiques, explorer de nouvelles idées et rechercher des solutions adaptées aux besoins réels.
+                        Curieux, dynamique et déterminé, je suis toujours prêt à apprendre, à relever de nouveaux défis et à enrichir mes connaissances. Je porte un intérêt particulier aux projets qui me permettent de mettre en pratique mes compétences, de développer mon esprit d’analyse et de repousser mes limites.
+                        Mon ambition est de construire une carrière solide dans le domaine du numérique, de contribuer à des projets innovants et d'apporter une réelle valeur ajoutée aux équipes avec lesquelles je travaillerai.
+                        Je suis ouvert aux opportunités de stage, de collaboration et aux projets professionnels qui me permettront de mettre mon potentiel à contribution, d'apprendre auprès de professionnels expérimentés et de continuer à évoluer.
+                    </p>
+                </div>
+
+                <div class="about-image">
+                    <img src="photo2.jpeg" alt="Moi">
+                </div>
+
+            </div>
+
+            <br><br>
+
+            <h1 style="text-align: center;">MON CURSUS</h1>
+
+            <div class="contenair">
+
+                <div class="card">
+                    <img src="iua.jpg" alt="IUA">
+                    <h2>2026-2027</h2>
+                    <p>Licence 3 MIAGE – Institut Universitaire d'Abidjan.</p>
+                </div>
+
+                <div class="card">
+                    <img src="iua.jpg" alt="IUA">
+                    <h2>2025-2026</h2>
+                    <p>Licence 2 MIAGE – Institut Universitaire d'Abidjan.</p>
+                </div>
+
+                <div class="card">
+                    <img src="iua.jpg" alt="IUA">
+                    <h2>2024-2025</h2>
+                    <p>Licence 1 MIAGE – Institut Universitaire d'Abidjan.</p>
+                </div>
+
+                <div class="card">
+                    <img src="lmdap.jpeg" alt="LMDAP">
+                    <h2>2023-2024</h2>
+                    <p>Baccalauréat D – Lycée Djedji Amondji Pierre.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION PROJECTS -->
+        <section id="Projects">
+
+            <h1 style="text-align: center;">MES PROJETS</h1>
+
+            <p class="projects-intro" style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">
+                Découvrez quelques projets que j'ai réalisés ou sur lesquels je travaille.
+            </p>
+
+            <div class="projects-container">
+
+                <!-- Projet 1 -->
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="images/projet1.jpg" alt="Projet de gestion scolaire">
+                    </div>
+
+                    <div class="project-content">
+                        <h2>Site de gestion touristique</h2>
+
+                        <p>
+                            Une application permettant de gérer le sejour des touristes en leur montrant les différents sites touristes que le Cote d'Ivoire et les hebergements a proximités ou autre
+                        </p>
+
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                        </div>
+
+                        <a href="#" class="project-btn">Voir le projet</a>
+                    </div>
+
+                </div>
+
+
+                <!-- Projet 2 -->
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="capture.jpeg" alt="Projet de portfolio">
+                    </div>
+
+                    <div class="project-content">
+                        <h2>Portfolio personnel</h2>
+
+                        <p>
+                            Un site web personnel présentant ma personnalité, mon parcours,
+                            mes compétences et mes réalisations.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="#" class="project-btn">Voir le projet</a>
+                    </div>
+
+                </div>
+
+
+                <!-- Projet 3 -->
+                <div class="project-card">
+
+                    <div class="project-image">
+                        <img src="images/projet3.jpg" alt="Projet de gestion">
+                    </div>
+
+                    <div class="project-content">
+                        <h2>Application de gestion d'une paroisse</h2>
+
+                        <p>
+                            Une application destinée à faciliter
+                            l'organisation et la gestion des données.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>SQL</span>
+                        </div>
+
+                        <a href="#" class="project-btn">Voir le projet</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <br><br>
+
+
+        <!-- SECTION SKILLS -->
+        <section id="Skills">
+
+            <h1 style="text-align: center;">SKILLS</h1>
+            <br><br><br><br>
+
+            <div class="slider" style="--width: 200px; --height: 200px; --quantity: 6;">
+
+                <div class="list">
+
+                    <div class="item" style="--position: 1">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 2">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 3">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 4">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 5">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 6">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                        </div>
+                    </div>
+
+                    <div class="item" style="--position: 7">
+                        <div class="card1">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <br><br><br><br>
+
+            <div class="containers">
+
+                <div class="skill-box">
+                    <span class="title">HTML</span>
+                    <div class="skill-bar">
+                        <span class="skill-per html">
+                            <span class="tooltip">80%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">CSS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per css">
+                            <span class="tooltip">40%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">PHP</span>
+                    <div class="skill-bar">
+                        <span class="skill-per php">
+                            <span class="tooltip">60%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">Python</span>
+                    <div class="skill-bar">
+                        <span class="skill-per python">
+                            <span class="tooltip">60%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">Laravel</span>
+                    <div class="skill-bar">
+                        <span class="skill-per laravel">
+                            <span class="tooltip">40%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">SQL</span>
+                    <div class="skill-bar">
+                        <span class="skill-per sql">
+                            <span class="tooltip">60%</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <span class="title">JavaScript</span>
+                    <div class="skill-bar">
+                        <span class="skill-per javascript">
+                            <span class="tooltip">40%</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION CONTACT -->
+        <section id="Contact">
+
+            <h1>CONTACTEZ-MOI</h1>
+
+            <p class="contact-intro" style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: whitesmoke;">
+                Vous avez un projet ou une opportunité à me proposer ?
+                N'hésitez pas à me contacter !
+            </p>
+
+            <div class="contact-container">
+
+                <!-- Formulaire -->
+                <div class="contact-form">
+
+                    <h2>Envoyez-moi un message</h2>
+
+                    <form>
+                        <input type="text" placeholder="Votre nom" required>
+
+                        <input type="email" placeholder="Votre adresse email" required>
+
+                        <input type="text" placeholder="Sujet du message" required>
+
+                        <textarea placeholder="Votre message..." rows="6" required></textarea>
+
+                        <button type="submit">Envoyer le message</button>
+                    </form>
+
+                </div>
+
+
+                <!-- Informations de contact -->
+                <div class="contact-info">
+
+                    <h2>Mes coordonnées</h2>
+
+                    <div class="info-box">
+                        <span>📧</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>melyohan225@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <span>📱</span>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>+225 0749738144</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <span>📍</span>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Abidjan, Côte d'Ivoire</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <span>💻</span>
+                        <div>
+                            <h3>Réseaux sociaux</h3>
+                            <p>LinkedIn | GitHub</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Mon portfolio.
+            Tous droits réservés à Autorité MEL YOHAN.
+        </p>
+    </footer>
+
+</body>
+
+</html>
